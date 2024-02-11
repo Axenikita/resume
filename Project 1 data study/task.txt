@@ -1,0 +1,17 @@
+TASK:
+You have been provided with a dataset containing information about requests (rows in the table) for a specific period of time (see the attached Excel file "Test sample").
+During the provided time frame, there was a decrease in conversion to completed requests, which negatively impacted the company's revenue.
+It is necessary to understand the reasons behind this decline and find the "root cause" of the problem.
+
+To accomplish the task, you need to first transfer the entire dataset into a database (imagine you are working with a real SQL table) and then work with the SQL table.
+Also, create a report in Power BI and visually display the following:
+• The number of requests broken down by days, weeks, and months (these should be hierarchies).
+• The Completed rate metric.
+• A table (matrix) broken down by days, where the relationships of up_stage, mid_stage, page_status, sub_stage to the number of requests are hierarchically displayed (see the screenshot below as an example).
+
+Based on the Power BI report, the following conclusions were drawn:
+
+Conversion sharply deteriorated on May 20th and remained low until the 22nd and 23rd, after which it returned to previous levels.
+Simultaneously with this decline in conversion, the total number of requests decreased, as the accumulation of unfulfilled requests prevented the emergence of new ones.
+The reason for the decline in conversion is the change in the structure of requests (up_stage). The share of the Personal Details category sharply increased, which had zero conversion, and the share of Bank Verification requests sharply decreased, which had 100% conversion. Additionally, the share of KYS Detail decreased, but their conversion rate increased, so the effect on the overall conversion was minimal.
+The conversion of other up stages changed, but this did not affect the overall result.
